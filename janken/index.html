@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>じゃんけん</title>
+</head>
+<body>
+  <div id="message1" style="position:absolute; left:10px; top:10px">
+    相手の選択は ？
+  </div>
+  <div id="message2" style="position:absolute; left:10px; top:40px">
+    勝敗の結果は ？
+  </div>
+  <form style="position:absolute; left:10px; top:70px">
+    あなたの選択は　
+    <select id="mySelect">
+      <option>グー</option>
+      <option>チョキ</option>
+      <option>パー</option>
+    </select>
+    <input type="button" value="決定" onclick="myGame()">
+  </form>
+  <script src="app.js"></script>
+</body>
+</html>

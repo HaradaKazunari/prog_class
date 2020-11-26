@@ -3,6 +3,24 @@ body{
   margin: 0;
 }
 
+.button{
+  display: inline-block;
+  border: solid 3px currentColor;
+  border-radius: 6px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #BF6A7A;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-size: 14px;
+
+  &:hover{
+    background-image: linear-gradient(
+      rgba(255,255,255,0.2),
+      rgba(255,255,255,0.2)
+    );
+  }
+}
 .conA{
   text-align:center;
   background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(img/fruits.jpg);
@@ -38,24 +56,6 @@ body{
 
     @media screen and(max-width:768px) {
       font-size: 24px;
-    }
-  }
-  a{
-    display: inline-block;
-    border: solid 3px currentColor;
-    border-radius: 6px;
-    color: #FFF;
-    text-decoration: none;
-    background-color: #BF6A7A;
-    padding: 10px 30px;
-    margin-top: 20px;
-    font-size: 14px;
-
-    &:hover{
-      background-image: linear-gradient(
-        rgba(255,255,255,0.2),
-        rgba(255,255,255,0.2)
-      );
     }
   }
 }
@@ -108,4 +108,47 @@ body{
   }
 }
 
+.conC {
+  background-color: #5D9AB2;
+  .container {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+  img{
+    width: 90%;
+    height: 100%;
+  }
+  .text{
+    color: #EEE;
+  }
+}
 
+.conD {
+  .container {
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    margin: 3rem auto;
+  }
+  img{
+    width: 70%;
+    height: auto;
+    padding-left: 30%;
+  }
+  .img{
+    order:2;
+  }
+  .text{
+    order:1;
+    padding-left: 2rem;
+    h2{
+      font-size:20px;
+    }
+  }
+  a{
+    box-shadow: 0 0 0 1px #888;
+  }
+}
