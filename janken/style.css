@@ -1,0 +1,41 @@
+body {
+  color: #EEFAEE;
+  background-color: #000500;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #EEFFEE;
+  color: #222522;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #BBCCBB;
+  color: #222522;
+}
+.btn-primary:active {
+  background-color: #99AA99 !important;
+}
+
+h1 {
+  margin: 2rem 0;
+}
+
+#message2 {
+  font-size: 40px;
+  color: #FF9999;
+}
+
+.gameWindow {
+  width: 50%;
+  margin: 0 auto;
+}
+.gameWindow .your_choice {
+  display: block;
+  margin-bottom: 1rem;
+}
+.gameWindow form {
+  margin: 1rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */

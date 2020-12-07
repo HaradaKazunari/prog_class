@@ -2,24 +2,61 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>じゃんけん</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+  <title></title>
 </head>
 <body>
-  <div id="message1" style="position:absolute; left:10px; top:10px">
-    相手の選択は ？
+
+  <h1 class="text-center">じゃんけんゲーム</h1>
+
+  <div id="message2" class="text-center">
   </div>
-  <div id="message2" style="position:absolute; left:10px; top:40px">
-    勝敗の結果は ？
-  </div>
-  <form style="position:absolute; left:10px; top:70px">
-    あなたの選択は　
-    <select id="mySelect">
-      <option>グー</option>
-      <option>チョキ</option>
-      <option>パー</option>
-    </select>
-    <input type="button" value="決定" onclick="myGame()">
-  </form>
-  <script src="app.js"></script>
+
+  <div class="gameWindow">
+    <div id="message1" class="text-center">
+      <div id="hisHand">
+        <img src="./img/gu.png" style="opacity:1; z-index:5;">
+        <img src="./img/tyoki.png" style="opacity:0;">
+        <img src="./img/pa.png" style="opacity:0;">
+      </div>
+    </div>
+    <form style="" class="text-center">
+      <span class="your_choice">
+        あなたの選択は
+      </span>
+      <input class="button btn btn-primary" type="button" data-id="0" value="グー" onclick="myGame()">
+      <input class="button btn btn-primary" type="button" data-id="1" value="チョキ" onclick="myGame()">
+      <input class="button btn btn-primary" type="button" data-id="2" value="パー" onclick="myGame()">
+    </form>
+
+  </div><!-- gameWindow -->
+
+  <script>
+
+$(function(){
+
+  let setImg = '#hisHand';
+  let fadeSpeed = 100;
+  let switchDelay = 300;
+
+  let src1 = " ./img/gu.png";
+  let src2 = " ./img/tyoki.png";
+  let src3 = " ./img/pa.png";
+  
+    setInterval(function(){
+       $(setImg).children('img').attr('src',src1);
+    },switchDelay);
+});
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
